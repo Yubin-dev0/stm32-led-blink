@@ -97,11 +97,15 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-	  HAL_GPIO_WritePin(GPIOA, GPIO_PIN_5, GPIO_PIN_RESET);
 	  /* USER CODE END WHILE */
-    /* USER CODE BEGIN 3 */
+
+
+      /* USER CODE BEGIN 3 */
+	  HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_5); // LD2 핀 토글
+	  HAL_Delay(500);                        // 500ms 대기 (0.5초)
+	  /* USER CODE END 3 */
   }
-  /* USER CODE END 3 */
+
 }
 
 /**
